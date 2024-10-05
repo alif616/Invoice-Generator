@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="invoice">
+        <header>
+            <div class="header-left">
+                <h1>ALIF INC</h1>
+                <address>
+                    <p>Md Ariful Islam Alif</p>
+                    <p>Ulipur, Kurigram</p>
+                    <p>+8801812-650465</p>
+                    <p>alif2580islam@gmail.com</p>
+                </address>
+            </div>
+            <div class="header-right">
+                <h2>INVOICE</h2>
+            </div>
+        </header>
+
+        <section class="invoice-info">
+            <div>
+                <label for="invoice-number">Invoice Number:</label>
+                <input type="text" id="invoice-number" placeholder="#12345">
+            </div>
+            <div>
+                <label for="invoice-date">Date:</label>
+                <input type="date" id="invoice-date" value="2024-06-15">
+            </div>
+            <div>
+                <label for="customer-name">Invoice To:</label>
+                <input type="text" id="customer-name" placeholder="Customer Name">
+            </div>
+            <div>
+                <label for="customer-address">Address:</label>
+                <input type="text" id="customer-address" placeholder="Customer Address">
+            </div>
+        </section>
+
+        <table id="invoice-items">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Item Description</th>
+                    <th>Price</th>
+                    <th>Qty</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td><input type="text" placeholder="Property Listing Fee"></td>
+                    <td><input type="number" placeholder="500.00" step="0.01"></td>
+                    <td><input type="number" value="1" min="1"></td>
+                    <td>$0.00</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td><input type="text" placeholder="Property Management Fee"></td>
+                    <td><input type="number" placeholder="200.00" step="0.01"></td>
+                    <td><input type="number" value="1" min="1"></td>
+                    <td>$0.00</td>
+                </tr>
+            </tbody>
+        </table>
+        <button id="add-item">Add Item</button>
+
+        <section class="totals">
+            <p>Subtotal: $<span id="subtotal">0.00</span></p>
+            <label for="tax-rate">Tax Rate (%): </label>
+            <input type="number" id="tax-rate" placeholder="Enter tax rate" step="0.01" value="10">
+            <p>Tax: $<span id="tax">0.00</span> <span id="tax-rate-display" style="display: none;"></span></p>
+            <h3>Total Amount Due: $<span id="total">0.00</span></h3>
+        </section>
+
+        <footer>
+            <p>Thank you for your business!</p>
+            <p>Manager: <span class="signature">Alif</span></p>
+        </footer>
+
+        <div class="download-buttons">
+            <button id="download-pdf">Download PDF</button>
+            <button id="download-jpg">Download JPG</button>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.5.0-beta4/html2canvas.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

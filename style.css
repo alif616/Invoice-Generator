@@ -1,0 +1,120 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+#invoice {
+    width: 210mm;
+    margin: 0 auto;
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid #00649d;
+    padding-bottom: 20px;
+}
+
+.header-left h1 {
+    color: #00649d;
+    margin-bottom: 5px;
+}
+
+.header-left address p {
+    margin: 0;
+}
+
+.header-right h2 {
+    color: #00649d;
+    text-transform: uppercase;
+}
+
+.invoice-info {
+    margin-top: 20px;
+}
+
+.invoice-info div {
+    margin-bottom: 10px;
+}
+
+.invoice-info label {
+    display: inline-block;
+    width: 150px;
+}
+
+input {
+    padding: 5px;
+    width: calc(100% - 160px);
+    margin-bottom: 5px;
+}
+
+/* Style for price input fields to include dollar sign */
+.price-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.price-wrapper span {
+    margin-right: 5px;
+    font-weight: bold;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #00649d;
+    color: white;
+}
+
+tfoot th {
+    text-align: right;
+}
+
+.totals {
+    text-align: right;
+    margin-top: 20px;
+}
+
+footer {
+    margin-top: 20px;
+    text-align: center;
+    font-style: italic;
+}
+
+.signature {
+    text-decoration: underline;
+}
+
+.download-buttons {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.download-buttons button {
+    background-color: #00649d;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-right: 10px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.download-buttons button:hover {
+    background-color: #00497a;
+}
